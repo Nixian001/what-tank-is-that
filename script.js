@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchData();
 });
 
+///
+/// SORTING AND DISPLAYING
+///
+
 function fetchData() {
     fetch('./tank-data.json')
     .then(response => response.json())
@@ -133,4 +137,14 @@ function sortTable(n) {
             switchcount++;
         }
     }
+}
+
+///
+/// QUERYING
+///
+
+document.getElementById("search-button").addEventListener("click", search);
+
+function search() {
+    console.log("Searching...");
 }
