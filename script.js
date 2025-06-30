@@ -72,17 +72,17 @@ function displayData(data) {
 
 // Code from W3Schools
 function sortTable(n) {
-    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+    var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount, equal = 0;
     table = document.getElementById("data-table")
     switching = true;
     dir = "asc";
     while (switching) {
         switching = false;
         rows = table.rows;
+        equal = 0;
 
         for (i = 1; i < (rows.length - 1); i++) {
             shouldSwitch = false;
-            equal = false;
 
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
@@ -100,10 +100,6 @@ function sortTable(n) {
                 nx = parseInt(nx);
                 ny = parseInt(ny);
 
-                if (nx == ny) {
-                    switchcount++;
-                    continue;
-                }
                 if (dir == "asc") {
                     if (nx > ny) {
                         shouldSwitch = true;
@@ -117,11 +113,6 @@ function sortTable(n) {
                 }
             }
             else {
-                if (x.innerHTML.toLowerCase() == y.innerHTML.toLowerCase()) {
-                    switchcount++;
-                    continue;
-                }
-
                 if (dir == "asc") {
                     if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                         shouldSwitch = true;
@@ -140,15 +131,6 @@ function sortTable(n) {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
             switchcount++;
-        } else {
-            if (switchcount == 0 && dir == "asc") {
-                dir = "desc";
-                switching = true;
-            }
-            else if (switchcount == 0 && dir == "desc") {
-                dir = "asc";
-                switching = true;
-            }
         }
     }
 }
