@@ -1,0 +1,17 @@
+/* 
+-- rich-black:          #0d1b2aff;
+-- oxford-blue:         #1b263bff;
+-- yinmn-blue:          #415a77ff;
+-- silver-lake-blue:    #778da9ff;
+-- platinum:            #e0e1ddff;
+*/
+
+h1 {
+    text-align: center;
+    color: #e0e1ddff;
+}
+
+body {
+    background-color: #0d1b2aff;
+    color: #778da9ff;
+}

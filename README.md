@@ -1,2 +1,2 @@
-# what-tank-is-that
-A website to find out what tank you might be looking at
+# What Tank is *That*?
+A website to find out what tank you might be looking at.

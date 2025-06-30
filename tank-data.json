@@ -1,0 +1,8 @@
+{
+    "T-34": {
+        "name": "T-34",
+        "country": "USSR",
+        "years": "1940-Present",
+        "tankType": "Medium Tank"
+    }
+}
