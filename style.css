@@ -23,6 +23,7 @@ body {
 
 .data-container {
     align-self: center;
+
 }
 
 table, th, tr, td {
@@ -39,6 +40,7 @@ td, th {
 
 table {
     width: 100%;
+    max-height: 50%;
 }
 
 td {
@@ -89,5 +91,13 @@ th {
 #search-button:active {
     border: 2px solid #778da9ff;
     background-color: #0d1b2aff;
+    color: #e0e1ddff;
+}
+
+input {
+    border: 2px solid #1b263bff;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #415a77ff;
     color: #e0e1ddff;
 }

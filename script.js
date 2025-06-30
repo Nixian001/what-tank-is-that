@@ -1,12 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    fetchData();
-});
+var data = 0;
 
-///
-/// SORTING AND DISPLAYING
-///
-
-function fetchData() {
+async function fetchData() {
     fetch('./tank-data.json')
     .then(response => response.json())
     .then(data => {
@@ -17,11 +11,20 @@ function fetchData() {
     });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    fetchData();
+});
+
+///
+/// SORTING AND DISPLAYING
+///
+
+
 function displayData(data) {
     const dataContainer = document.getElementById('data-container');
     dataContainer.innerHTML = '';
 
-    const entries = Object.values(data); // Handles object-based JSON
+    const entries = Object.values(filter(data)); // Handles object-based JSON
 
     if (entries.length === 0) {
         dataContainer.textContent = 'No data available.';
@@ -141,8 +144,20 @@ function sortTable(n) {
 /// QUERYING
 ///
 
-document.getElementById("search-button").addEventListener("click", search);
+document.getElementById("search-button").addEventListener("click", fetchData);
 
-function search() {
-    console.log("Searching...");
+function filter(data) {
+    const entries = Object.values(data); // Handles object-based JSON
+    var filtered = Array.from(entries);
+
+    console.log("Filterating...");
+    const searchName = document.getElementById("search-name");
+    
+    if (searchName.value.length > 0) {
+        console.log(`Filtering for name = ${searchName.value}`);
+        filtered = filtered.filter((entry) => entry["name"].includes(searchName.value));
+        console.log(filtered);
+    }
+
+    return filtered;
 }
