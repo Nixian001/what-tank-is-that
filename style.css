@@ -10,11 +10,19 @@
 h1 {
     text-align: center;
     color: #e0e1ddff;
+    font-family: "Sura", serif;
+    font-weight: 700;
 }
 
 body {
     background-color: #0d1b2aff;
     color: #778da9ff;
+    font-family: "Sura", serif;
+    font-weight: 400;
+}
+
+.data-container {
+    align-self: center;
 }
 
 table, th, tr, td {
@@ -22,20 +30,34 @@ table, th, tr, td {
     border-collapse: collapse;
     color: #e0e1ddff
 }
+
 td, th {
     padding: 15px;
     padding: 15px;
 }
-table {
+
+#main-table {
+    margin: auto;
     width: 80%;
+    border: 3px solid #1b263bff;
+    padding: 10px;
 }
+
+table {
+    width: 100%;
+}
+
 td {
     border-left: 2px solid;
     border-right: 2px solid;
 }
+
 tr:nth-child(even) {
     background-color: #1b263bff;
 }
+
+tr:hover { background-color: #778da9aa; color: #0d1b2aff}
+
 th {
     text-align: center;
     height: 30px;
