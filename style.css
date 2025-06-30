@@ -28,7 +28,8 @@ body {
 table, th, tr, td {
     border-color: #415a77ff;
     border-collapse: collapse;
-    color: #e0e1ddff
+    color: #e0e1ddff;
+    user-select: none;
 }
 
 td, th {
