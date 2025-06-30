@@ -155,7 +155,7 @@ function filter(data) {
     
     if (searchName.value.length > 0) {
         console.log(`Filtering for name = ${searchName.value}`);
-        filtered = filtered.filter((entry) => entry["name"].includes(searchName.value));
+        filtered = filtered.filter((entry) => entry["name"].toLowerCase().includes(searchName.value.toLowerCase()));
         console.log(filtered);
     }
 
