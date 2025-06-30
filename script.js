@@ -99,8 +99,6 @@ function sortTable(n) {
                 nx = nx.replaceAll(",", "");
                 ny = ny.replaceAll(",", "");
                 
-                console.log(nx);
-
                 nx = parseInt(nx);
                 ny = parseInt(ny);
 
