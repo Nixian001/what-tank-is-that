@@ -4,5 +4,12 @@
         "country": "USSR",
         "years": "1940-Present",
         "type": "Medium Tank"
+    },
+    {
+        "name": "Panzer IV ausf. A",
+        "country": "Germany",
+        "years": "1937-1939",
+        "type": "Medium Tank",
+        "built": "35"
     }
 ]

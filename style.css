@@ -4,6 +4,7 @@
 -- yinmn-blue:          #415a77ff;
 -- silver-lake-blue:    #778da9ff;
 -- platinum:            #e0e1ddff;
+-- pretty-yellow:       #fcba03ff;
 */
 
 h1 {
@@ -14,4 +15,29 @@ h1 {
 body {
     background-color: #0d1b2aff;
     color: #778da9ff;
+}
+
+table, th, tr, td {
+    border-color: #415a77ff;
+    border-collapse: collapse;
+    color: #e0e1ddff
+}
+td, th {
+    padding: 15px;
+    padding: 15px;
+}
+table {
+    width: 80%;
+}
+td {
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+tr:nth-child(even) {
+    background-color: #1b263bff;
+}
+th {
+    text-align: center;
+    height: 30px;
+    background-color: rgb(0, 171, 190);
 }
