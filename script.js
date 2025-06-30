@@ -53,7 +53,14 @@ function displayData(data) {
         const row = document.createElement('tr');
         allKeys.forEach(key => {
             const cell = document.createElement('td');
-            cell.textContent = entry[key] ?? ''; // Show empty if key doesn't exist
+            
+            if (isNaN(parseInt(entry[key])) || String(entry[key]).includes("-")) {
+                cell.textContent = entry[key] ?? '';
+            }
+            else {
+                cell.textContent = Number(entry[key]).toLocaleString("en-GB") ?? ""; // Show empty if key doesn't exist
+            }
+
             row.appendChild(cell);
         });
         tbody.appendChild(row);
@@ -80,20 +87,51 @@ function sortTable(n) {
             x = rows[i].getElementsByTagName("TD")[n];
             y = rows[i + 1].getElementsByTagName("TD")[n];
 
-            if (x.innerHTML.toLowerCase() == y.innerHTML.toLowerCase()) {
-                switchcount++;
-                continue;
-            }
+            if (!isNaN(parseInt(x.innerHTML)) && !isNaN(parseInt(y.innerHTML))
+            && !x.innerHTML.toLowerCase().includes("-") && !y.innerHTML.toLowerCase().includes("-")) {
+                let nx = x.innerHTML;
+                let ny = y.innerHTML;
 
-            if (dir == "asc") {
-                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                    shouldSwitch = true;
-                    break;
+                nx = nx.replaceAll(",", "");
+                ny = ny.replaceAll(",", "");
+                
+                console.log(nx);
+
+                nx = parseInt(nx);
+                ny = parseInt(ny);
+
+                if (nx == ny) {
+                    switchcount++;
+                    continue;
                 }
-            } else if (dir == "desc") {
-                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                    shouldSwitch = true;
-                    break;
+                if (dir == "asc") {
+                    if (nx > ny) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (nx < ny) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            else {
+                if (x.innerHTML.toLowerCase() == y.innerHTML.toLowerCase()) {
+                    switchcount++;
+                    continue;
+                }
+
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
                 }
             }
         }

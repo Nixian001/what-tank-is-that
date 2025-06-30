@@ -2,43 +2,43 @@
     {
         "name": "T-34",
         "country": "USSR",
-        "years": "1940-Present",
+        "years Produced": "1940-Present",
         "type": "Medium Tank",
-        "No. Built": "84,070"
+        "No. Built": 84070
     },
     {
         "name": "Panzer IV",
         "country": "Germany",
-        "years": "1937-1939",
+        "years Produced": "1937-1939",
         "type": "Medium Tank",
-        "No. Built": "8,553"
+        "No. Built": 8553
     },
     {
         "name": "Panzer 38(t)",
         "country": "Chechoslovakia",
-        "years": "1939-1942",
+        "years Produced": "1939-1942",
         "type": "Light Tank",
-        "No. Built": "1,414"
+        "No. Built": 1414
     },
     {
         "name": "Type 89 I-Go (Chi-Ro)",
         "country": "Japan",
-        "years": "1932-1942",
+        "years Produced": "1932-1942",
         "type": "Medium Tank",
-        "No. Built": "404"
+        "No. Built": 404
     },
     {
         "name": "M3 Lee",
         "country": "United States of America",
-        "years": "1941-1955",
+        "years Produced": "1941-1955",
         "type": "Medium Tank",
-        "No. Built": "6,258"
+        "No. Built": 6258
     },
     {
         "name": "Sturmgeschütz III (StuG III)",
         "country": "Germany",
-        "years": "1941-1955",
+        "years Produced": "1941-1955",
         "type": "Medium Tank",
-        "No. Built": "~10,000"
+        "No. Built": 10000
     }
 ]
